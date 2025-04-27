@@ -6,6 +6,27 @@
     <title>RBRVM Awareness</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./k/logo.jpg" type="image/png">
+    <style>
+        .scroll-section {
+            padding: 40px;
+            background-color: #f9f9f9;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .scroll-box {
+            display: inline-block;
+            background-color: #fff;
+            width: 300px;
+            margin-right: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            vertical-align: top;
+        }
+        .scroll-box h3 {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,25 +49,36 @@
     </header>
 
     <main>
-        <section id="about">
-            <h1>About RBRVM Awareness</h1>
-            <p>Our mission is to make waste segregation easy and rewarding through reverse vending machines.</p>
-            <img src="images/reverse-vending-machine.jpg" alt="Reverse Vending Machine" />
-            <p>By depositing plastic and metal waste, you earn supercoins that can be deposited into your account.</p>
+        <section class="scroll-section">
+            <h2>Featured Articles</h2>
+            <div class="scroll-box">
+                <h3>Why Recycling Matters</h3>
+                <p>Recycling helps conserve natural resources and reduces the burden on landfills. Learn how every bottle counts.</p>
+            </div>
+            <div class="scroll-box">
+                <h3>Understanding Waste Types</h3>
+                <p>Explore the differences between plastic, metal, and biodegradable waste. Proper sorting makes recycling effective!</p>
+            </div>
+            <div class="scroll-box">
+                <h3>Benefits of Supercoins</h3>
+                <p>Learn how you can earn and redeem Supercoins by using RVMs. A fun and rewarding way to stay eco-conscious.</p>
+            </div>
         </section>
 
-        <section id="deposit">
-            <h2>Deposit Your Supercoins</h2>
-            <form id="deposit-form">
-                <input type="text" id="redemption-code" placeholder="Enter your redemption code" required>
-                <button type="submit">Redeem Supercoins</button>
-            </form>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions, feel free to reach out!</p>
-            <p>Email: contact@rbrvmawareness.com</p>
+        <section class="scroll-section">
+            <h2>Quick Quizzes</h2>
+            <div class="scroll-box">
+                <h3>Quiz: What Goes Where?</h3>
+                <p>Test your knowledge of proper waste segregation. Click to take the quiz!</p>
+            </div>
+            <div class="scroll-box">
+                <h3>Quiz: Plastic or Metal?</h3>
+                <p>Can you identify the type of waste correctly? Sharpen your sorting skills now.</p>
+            </div>
+            <div class="scroll-box">
+                <h3>Quiz: Eco Facts</h3>
+                <p>Discover interesting facts about the environment and sustainable living through this quick quiz.</p>
+            </div>
         </section>
     </main>
 
