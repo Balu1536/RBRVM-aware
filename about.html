@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBRVM Awareness</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" href="./k/logo.jpg" type="image/png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./k/logo.jpg" alt="RBRVM Logo" style="height: 40px; vertical-align: middle;">
+                <span>RBRVM Awareness</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="./quizzes.html">Quiz</a></li>
+                <li><a href="./article.html">Articles</a></li>
+                <li><a href="./deposit.html">Deposit Supercoins</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>About RBRVM Awareness</h1>
+            <p>Our mission is to make waste segregation easy and rewarding through reverse vending machines.</p>
+            <img src="images/reverse-vending-machine.jpg" alt="Reverse Vending Machine" />
+            <p>By depositing plastic and metal waste, you earn supercoins that can be deposited into your account.</p>
+
+            <h2>About the Project</h2>
+            <p>The Reverse Vending Machine (RVM) project is a smart initiative aimed at improving waste management practices through automation and reward-based motivation. The core goal is to reduce the environmental impact of unmanaged plastic and metal waste by promoting proper segregation at the user level.</p>
+
+            <p>This system uses various sensors including capacitive and inductive proximity sensors to distinguish between plastic and metal waste. An ultrasonic sensor detects object presence, while a load cell is used to measure the weight of deposited material. The Arduino Mega 2560 microcontroller processes this input and determines the type and amount of waste, triggering appropriate servo motors to sort the waste into correct compartments.</p>
+
+            <p>Each deposit is rewarded with a digital currency called <strong>Supercoins</strong>. These coins can be redeemed via the website using a unique QR or redemption code provided by the machine. This process gamifies recycling and motivates individuals, especially youth, to participate actively in eco-friendly behavior.</p>
+
+            <p>In addition to reward tracking, the platform features interactive quizzes, articles, and educational visuals that help users understand the importance of waste segregation, environmental conservation, and how they can contribute to a cleaner future. Users can track their coin balance, learn, and grow in awareness while earning rewards.</p>
+
+            <p>Future expansions of the project aim to implement machine-to-server synchronization for remote monitoring, leaderboards for competitive participation, and a mobile app for instant notifications. Ultimately, the RBRVM Awareness project envisions a greener world where technology and civic responsibility go hand in hand.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 RBRVM Awareness. All Rights Reserved.</p>
+        <ul class="nav-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <script src="about.js"></script>
+</body>
+</html>
