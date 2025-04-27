@@ -7,23 +7,20 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./k/logo.jpg" type="image/png">
     <style>
-        .scroll-section {
+        .section {
             padding: 40px;
             background-color: #f9f9f9;
-            overflow-x: auto;
-            white-space: nowrap;
+            height: 400px;
+            overflow-y: auto;
         }
-        .scroll-box {
-            display: inline-block;
+        .content-box {
             background-color: #fff;
-            width: 300px;
-            margin-right: 20px;
+            margin-bottom: 20px;
             padding: 20px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            vertical-align: top;
         }
-        .scroll-box h3 {
+        .content-box h3 {
             margin-top: 0;
         }
     </style>
@@ -49,33 +46,42 @@
     </header>
 
     <main>
-        <section class="scroll-section">
+        <section class="section">
+            <h2>About the Project</h2>
+            <div class="content-box">
+                <h3>Reverse Vending Machine Initiative</h3>
+                <p>Our RVM project aims to automate the segregation and recycling of plastic and metal waste. Users can deposit their recyclable items into the machine, which sorts the waste and rewards them with digital currency called Supercoins. These coins can be redeemed online via UPI-linked accounts.</p>
+                <p>The system uses advanced sensors to detect the type of material, calculate weight, and distribute appropriate rewards. The website complements the machine by offering educational content, quizzes, and user dashboards.</p>
+            </div>
+        </section>
+
+        <section class="section">
             <h2>Featured Articles</h2>
-            <div class="scroll-box">
+            <div class="content-box">
                 <h3>Why Recycling Matters</h3>
                 <p>Recycling helps conserve natural resources and reduces the burden on landfills. Learn how every bottle counts.</p>
             </div>
-            <div class="scroll-box">
+            <div class="content-box">
                 <h3>Understanding Waste Types</h3>
                 <p>Explore the differences between plastic, metal, and biodegradable waste. Proper sorting makes recycling effective!</p>
             </div>
-            <div class="scroll-box">
+            <div class="content-box">
                 <h3>Benefits of Supercoins</h3>
                 <p>Learn how you can earn and redeem Supercoins by using RVMs. A fun and rewarding way to stay eco-conscious.</p>
             </div>
         </section>
 
-        <section class="scroll-section">
+        <section class="section">
             <h2>Quick Quizzes</h2>
-            <div class="scroll-box">
+            <div class="content-box">
                 <h3>Quiz: What Goes Where?</h3>
                 <p>Test your knowledge of proper waste segregation. Click to take the quiz!</p>
             </div>
-            <div class="scroll-box">
+            <div class="content-box">
                 <h3>Quiz: Plastic or Metal?</h3>
                 <p>Can you identify the type of waste correctly? Sharpen your sorting skills now.</p>
             </div>
-            <div class="scroll-box">
+            <div class="content-box">
                 <h3>Quiz: Eco Facts</h3>
                 <p>Discover interesting facts about the environment and sustainable living through this quick quiz.</p>
             </div>

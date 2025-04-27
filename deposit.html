@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Supercoins - RBRVM</title>
+    <link rel="stylesheet" href="deposit.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./k/logo.jpg" alt="RBRVM Logo" style="height: 40px; vertical-align: middle;">
+                <span>RBRVM Awareness</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./quizzes.html">Quiz</a></li>
+                <li><a href="./article.html">Articles</a></li>
+                <li><a href="./deposit.html">Deposit Supercoins</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="deposit-section">
+            <h2>Deposit Your Supercoins</h2>
+            <p>Enter the redemption code you received from the RVM machine to add Supercoins to your UPI account.</p>
+
+            <form id="deposit-form">
+                <label for="code">Redemption Code:</label><br>
+                <input type="text" id="code" name="code" placeholder="Enter code here" required><br><br>
+
+                <label for="upi">UPI ID:</label><br>
+                <input type="text" id="upi" name="upi" placeholder="example@upi" required><br><br>
+
+                <button type="submit">Deposit</button>
+            </form>
+
+            <div id="message"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 RBRVM Awareness. All rights reserved.</p>
+        <ul class="nav-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <script src="./scripts/deposit.js"></script>
+</body>
+</html>

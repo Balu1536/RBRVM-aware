@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RBRVM Awareness</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./k/logo.jpg" alt="RBRVM Logo" style="height: 40px; vertical-align: middle;">
+                <span>RBRVM Awareness</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./quizzes.html">Quiz</a></li>
+                <li><a href="./article.html">Articles</a></li>
+                <li><a href="./deposit.html">Deposit Supercoins</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./signup.html">Sign Up</a></li>
+            </ul>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>We'd love to hear from you!</h2>
+            <form id="contact-form">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea><br><br>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div id="response"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 RBRVM Awareness. All rights reserved.</p>
+        <ul class="nav-links">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
