@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RBRVM Awareness</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="./k/logo.jpg" type="image/png" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./k/logo.jpg" type="image/png">
+    <style>
+        .section {
+            padding: 40px;
+            background-color: #f9f9f9;
+            height: 400px;
+            overflow-y: auto;
+        }
+        .content-box {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .content-box h3 {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="./k/logo.jpg" alt="RBRVM Logo" />
+                <img src="./k/logo.jpg" alt="RBRVM Logo" style="height: 40px; vertical-align: middle;">
                 <span>RBRVM Awareness</span>
             </div>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -40,17 +58,14 @@
         <section class="section">
             <h2>Featured Articles</h2>
             <div class="content-box">
-                <img src="./images/recycling-matters.jpg" alt="Why Recycling Matters" style="width:100%; max-height:200px; object-fit:cover; border-radius:6px;" />
                 <h3><a href="./articles/why-recycling-matters.html">Why Recycling Matters</a></h3>
                 <p>Recycling helps conserve natural resources and reduces the burden on landfills. Learn how every bottle counts.</p>
             </div>
             <div class="content-box">
-                <img src="./images/waste-types.jpg" alt="Understanding Waste Types" style="width:100%; max-height:200px; object-fit:cover; border-radius:6px;" />
                 <h3><a href="./articles/understanding-waste-types.html">Understanding Waste Types</a></h3>
                 <p>Explore the differences between plastic, metal, and biodegradable waste. Proper sorting makes recycling effective!</p>
             </div>
             <div class="content-box">
-                <img src="./images/supercoins-benefits.jpg" alt="Benefits of Supercoins" style="width:100%; max-height:200px; object-fit:cover; border-radius:6px;" />
                 <h3><a href="./articles/benefits-of-supercoins.html">Benefits of Supercoins</a></h3>
                 <p>Learn how you can earn and redeem Supercoins by using RVMs. A fun and rewarding way to stay eco-conscious.</p>
             </div>
@@ -59,17 +74,14 @@
         <section class="section">
             <h2>Quick Quizzes</h2>
             <div class="content-box">
-                <img src="./images/quiz-what-goes-where.jpg" alt="Quiz What Goes Where" style="width:100%; max-height:200px; object-fit:cover; border-radius:6px;" />
                 <h3><a href="./quizzes/what-goes-where.html">Quiz: What Goes Where?</a></h3>
                 <p>Test your knowledge of proper waste segregation. Click to take the quiz!</p>
             </div>
             <div class="content-box">
-                <img src="./images/quiz-plastic-or-metal.jpg" alt="Quiz Plastic or Metal" style="width:100%; max-height:200px; object-fit:cover; border-radius:6px;" />
                 <h3><a href="./quizzes/plastic-or-metal.html">Quiz: Plastic or Metal?</a></h3>
                 <p>Can you identify the type of waste correctly? Sharpen your sorting skills now.</p>
             </div>
             <div class="content-box">
-                <img src="./images/quiz-eco-facts.jpg" alt="Quiz Eco Facts" style="width:100%; max-height:200px; object-fit:cover; border-radius:6px;" />
                 <h3><a href="./quizzes/eco-facts.html">Quiz: Eco Facts</a></h3>
                 <p>Discover interesting facts about the environment and sustainable living through this quick quiz.</p>
             </div>
@@ -84,6 +96,6 @@
         </ul>
     </footer>
 
-    <script src="./scripts/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
