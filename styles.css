@@ -12,6 +12,12 @@ body {
     background-color: #f4f4f4; /* Light background for contrast */
 }
 
+/* Section Styles */
+
+.section {
+    margin-bottom: 40px; /* Space between sections */
+}
+
 /* Header Styles */
 
 header {
@@ -54,9 +60,9 @@ nav {
 
 main {
     display: flex;
-    justify-content: center; /* Center the form container */
-    align-items: center;
-    height: 100vh; /* Full height for centering */
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align sections */
+    padding: 20px; /* Add padding for main content */
 }
 
 /* Form Styles */
