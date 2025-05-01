@@ -1,101 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RBRVM Awareness</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="./k/logo.jpg" type="image/png">
-    <style>
-        .section {
-            padding: 40px;
-            background-color: #f9f9f9;
-            height: 400px;
-            overflow-y: auto;
-        }
-        .content-box {
-            background-color: #fff;
-            margin-bottom: 20px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .content-box h3 {
-            margin-top: 0;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RBRVM Awareness</title>
+<link rel="icon" href="./k/logo.jpg" type="image/png" />
+<style>
+  /* Splash screen styles */
+  #splashScreen {
+    position: fixed;
+    top:0; left:0; right:0; bottom:0;
+    background:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: pointer;
+    transition: opacity 1s ease;
+  }
+  #splashScreen.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+  }
+  #splashScreen img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  /* Hide main content initially */
+  main, header, footer {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  /* Show main content when splash removed */
+  body.loaded main,
+  body.loaded header,
+  body.loaded footer {
+    opacity: 1;
+  }
+
+  /* Your existing CSS snippet for sections and layout could go here or be linked */
+  .section {
+    margin-bottom: 40px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+
+  /* Header */
+  header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 10px 0;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  .nav-links li {
+    margin-left: 20px;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="./k/logo.jpg" alt="RBRVM Logo" style="height: 40px; vertical-align: middle;">
-                <span>RBRVM Awareness</span>
-            </div>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <!-- Splash Screen Overlay -->
+  <div id="splashScreen" title="Click to enter the site">
+    <img src="./k/logo.jpg" alt="RBRVM Logo" />
+  </div>
 
-            <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./quizzes.html">Quiz</a></li>
-                <li><a href="./article.html">Articles</a></li>
-                <li><a href="./deposit.html">Deposit Supercoins</a></li>
-                <li><a href="./login.html">Login</a></li>
-                <li><a href="./signup.html">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./k/logo.jpg" alt="RBRVM Logo" style="height: 40px; vertical-align: middle;" />
+        <span>RBRVM Awareness</span>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./quizzes.html">Quiz</a></li>
+        <li><a href="./article.html">Articles</a></li>
+        <li><a href="./deposit.html">Deposit Supercoins</a></li>
+        <li><a href="./login.html">Login</a></li>
+        <li><a href="./signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="section">
-            <h2>About the Project</h2>
-            <div class="content-box">
-                <h3>Reverse Vending Machine Initiative</h3>
-                <p>Our RVM project aims to automate the segregation and recycling of plastic and metal waste. Users can deposit their recyclable items into the machine, which sorts the waste and rewards them with digital currency called Supercoins. These coins can be redeemed online via UPI-linked accounts.</p>
-                <p>The system uses advanced sensors to detect the type of material, calculate weight, and distribute appropriate rewards. The website complements the machine by offering educational content, quizzes, and user dashboards.</p>
-            </div>
-        </section>
+  <main>
+    <section class="section">
+      <h2>About the Project</h2>
+      <div class="content-box">
+        <h3>Reverse Vending Machine Initiative</h3>
+        <p>Our RVM project aims to automate the segregation and recycling of plastic and metal waste. Users can deposit their recyclable items into the machine, which sorts the waste and rewards them with digital currency called Supercoins. These coins can be redeemed online via UPI-linked accounts.</p>
+        <p>The system uses advanced sensors to detect the type of material, calculate weight, and distribute appropriate rewards. The website complements the machine by offering educational content, quizzes, and user dashboards.</p>
+      </div>
+    </section>
 
-        <section class="section">
-            <h2>Featured Articles</h2>
-            <div class="content-box">
-                <h3><a href="./articles/why-recycling-matters.html">Why Recycling Matters</a></h3>
-                <p>Recycling helps conserve natural resources and reduces the burden on landfills. Learn how every bottle counts.</p>
-            </div>
-            <div class="content-box">
-                <h3><a href="./articles/understanding-waste-types.html">Understanding Waste Types</a></h3>
-                <p>Explore the differences between plastic, metal, and biodegradable waste. Proper sorting makes recycling effective!</p>
-            </div>
-            <div class="content-box">
-                <h3><a href="./articles/benefits-of-supercoins.html">Benefits of Supercoins</a></h3>
-                <p>Learn how you can earn and redeem Supercoins by using RVMs. A fun and rewarding way to stay eco-conscious.</p>
-            </div>
-        </section>
+    <section class="section">
+      <h2>Featured Articles</h2>
+      <div class="content-box">
+        <h3><a href="./articles/why-recycling-matters.html">Why Recycling Matters</a></h3>
+        <p>Recycling helps conserve natural resources and reduces the burden on landfills. Learn how every bottle counts.</p>
+      </div>
+      <div class="content-box">
+        <h3><a href="./articles/understanding-waste-types.html">Understanding Waste Types</a></h3>
+        <p>Explore the differences between plastic, metal, and biodegradable waste. Proper sorting makes recycling effective!</p>
+      </div>
+      <div class="content-box">
+        <h3><a href="./articles/benefits-of-supercoins.html">Benefits of Supercoins</a></h3>
+        <p>Learn how you can earn and redeem Supercoins by using RVMs. A fun and rewarding way to stay eco-conscious.</p>
+      </div>
+    </section>
 
-        <section class="section">
-            <h2>Quick Quizzes</h2>
-            <div class="content-box">
-                <h3><a href="./quizzes/what-goes-where.html">Quiz: What Goes Where?</a></h3>
-                <p>Test your knowledge of proper waste segregation. Click to take the quiz!</p>
-            </div>
-            <div class="content-box">
-                <h3><a href="./quizzes/plastic-or-metal.html">Quiz: Plastic or Metal?</a></h3>
-                <p>Can you identify the type of waste correctly? Sharpen your sorting skills now.</p>
-            </div>
-            <div class="content-box">
-                <h3><a href="./quizzes/eco-facts.html">Quiz: Eco Facts</a></h3>
-                <p>Discover interesting facts about the environment and sustainable living through this quick quiz.</p>
-            </div>
-        </section>
-    </main>
+    <section class="section">
+      <h2>Quick Quizzes</h2>
+      <div class="content-box">
+        <h3><a href="./quizzes/what-goes-where.html">Quiz: What Goes Where?</a></h3>
+        <p>Test your knowledge of proper waste segregation. Click to take the quiz!</p>
+      </div>
+      <div class="content-box">
+        <h3><a href="./quizzes/plastic-or-metal.html">Quiz: Plastic or Metal?</a></h3>
+        <p>Can you identify the type of waste correctly? Sharpen your sorting skills now.</p>
+      </div>
+      <div class="content-box">
+        <h3><a href="./quizzes/eco-facts.html">Quiz: Eco Facts</a></h3>
+        <p>Discover interesting facts about the environment and sustainable living through this quick quiz.</p>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2023 RBRVM Awareness. All Rights Reserved.</p>
-        <ul class="nav-links">
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/contact.html">Contact Us</a></li>
-        </ul>
-    </footer>
+  <footer>
+    <p>&copy; 2023 RBRVM Awareness. All Rights Reserved.</p>
+    <ul class="nav-links">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact Us</a></li>
+    </ul>
+  </footer>
 
-    <script src="script.js"></script>
+<script>
+  const splash = document.getElementById('splashScreen');
+  splash.addEventListener('click', () => {
+    splash.classList.add('fadeOut');
+    // Wait for the fade-out transition to finish before removing splash and showing content
+    splash.addEventListener('transitionend', () => {
+      splash.style.display = 'none';
+      document.body.classList.add('loaded'); // shows main content with opacity transition
+    }, { once: true });
+  });
+
+  // Optional: menu toggle function for nav
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
