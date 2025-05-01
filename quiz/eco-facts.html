@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz 2: Recycling Principles - RBRVM Awareness</title>
-    <link rel="stylesheet" href="style/styles.css">
+    <title>Quiz: Eco Facts - RBRVM Awareness</title>
+    <link rel="stylesheet" href="../style/styles.css">
     <link rel="icon" href="/k/logo.jpg" type="image/png">
 </head>
 <body>
@@ -28,31 +28,28 @@
 
     <main>
         <section id="quiz">
-            <h1>Quiz 2: Recycling Principles</h1>
-            <p>Learn about recycling principles and how to implement them.</p>
+            <h1>Quiz: Eco Facts</h1>
+            <p>Discover interesting facts about the environment and sustainable living through this quick quiz.</p>
             <form id="quiz-form">
                 <div class="question">
-                    <h2>1. What materials can be recycled?</h2>
-                    <label><input type="checkbox" name="q1" value="paper"> Paper</label><br>
-                    <label><input type="checkbox" name="q1" value="glass"> Glass</label><br>
-                    <label><input type="checkbox" name="q1" value="plastic"> Plastic</label><br>
-                    <label><input type="checkbox" name="q1" value="food-waste"> Food Waste</label><br>
+                    <h2>1. What percentage of the Earth's water is freshwater?</h2>
+                    <label><input type="radio" name="q1" value="3"> 3%</label><br>
+                    <label><input type="radio" name="q1" value="10"> 10%</label><br>
+                    <label><input type="radio" name="q1" value="25"> 25%</label><br>
                 </div>
 
                 <div class="question">
-                    <h2>2. Which of these is NOT a benefit of recycling?</h2>
-                    <label><input type="radio" name="q2" value="reduces-waste"> Reduces landfill waste</label><br>
-                    <label><input type="radio" name="q2" value="saves-energy"> Saves energy</label><br>
-                    <label><input type="radio" name="q2" value="uses-more-resources"> Uses more natural resources</label><br>
-                    <label><input type="radio" name="q2" value="reduces-pollution"> Reduces pollution</label><br>
+                    <h2>2. How long does it take for a plastic bottle to decompose?</h2>
+                    <label><input type="radio" name="q2" value="10"> 10 years</label><br>
+                    <label><input type="radio" name="q2" value="100"> 100 years</label><br>
+                    <label><input type="radio" name="q2" value="450"> 450 years</label><br>
                 </div>
 
                 <div class="question">
-                    <h2>3. What does the recycling symbol (♻) typically represent?</h2>
-                    <label><input type="radio" name="q3" value="reuse"> Reuse only</label><br>
-                    <label><input type="radio" name="q3" value="recycle"> Recycle materials</label><br>
-                    <label><input type="radio" name="q3" value="trash"> Trash item</label><br>
-                    <label><input type="radio" name="q3" value="none"> None of the above</label><br>
+                    <h2>3. What is the largest source of greenhouse gas emissions?</h2>
+                    <label><input type="radio" name="q3" value="transportation"> Transportation</label><br>
+                    <label><input type="radio" name="q3" value="electricity"> Electricity</label><br>
+                    <label><input type="radio" name="q3" value="agriculture"> Agriculture</label><br>
                 </div>
 
                 <button type="submit">Submit</button>
@@ -77,23 +74,16 @@
 
         document.getElementById('quiz-form').addEventListener('submit', function(event) {
             event.preventDefault();
-
             let score = 0;
 
-            const q1Answers = Array.from(document.querySelectorAll('input[name="q1"]:checked')).map(input => input.value);
-            if (q1Answers.includes("paper") && q1Answers.includes("glass") && q1Answers.includes("plastic") && !q1Answers.includes("food-waste")) {
-                score++;
-            }
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            if (q1 && q1.value === "3") score++;
 
             const q2 = document.querySelector('input[name="q2"]:checked');
-            if (q2 && q2.value === "uses-more-resources") {
-                score++;
-            }
+            if (q2 && q2.value === "450") score++;
 
             const q3 = document.querySelector('input[name="q3"]:checked');
-            if (q3 && q3.value === "recycle") {
-                score++;
-            }
+            if (q3 && q3.value === "electricity") score++;
 
             document.getElementById('result').textContent = `You scored ${score}/3.`;
         });

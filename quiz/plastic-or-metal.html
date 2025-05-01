@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz: Plastic or Metal? - RBRVM Awareness</title>
+  <link rel="stylesheet" href="../style/styles.css" />
+  <link rel="icon" href="/k/logo.jpg" type="image/png" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/k/logo.jpg" alt="RBRVM Logo" style="height: 40px; vertical-align: middle;" />
+        <span>RBRVM Awareness</span>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/quizzes.html">Quiz</a></li>
+        <li><a href="/article.html">Articles</a></li>
+        <li><a href="/deposit.html">Deposit Supercoins</a></li>
+        <li><a href="/login.html">Login</a></li>
+        <li><a href="/signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="quiz">
+      <h1>Quiz: Plastic or Metal?</h1>
+      <p>Can you identify the type of waste correctly? Sharpen your sorting skills now.</p>
+      <form id="quiz-form">
+        <div class="question">
+          <h2>1. Is a soda can made of plastic or metal?</h2>
+          <label><input type="radio" name="q1" value="plastic" /> Plastic</label><br />
+          <label><input type="radio" name="q1" value="metal" /> Metal</label><br />
+        </div>
+        <div class="question">
+          <h2>2. Is a plastic bottle or glass bottle recyclable as metal waste?</h2>
+          <label><input type="radio" name="q2" value="plastic" /> Plastic</label><br />
+          <label><input type="radio" name="q2" value="metal" /> Metal</label><br />
+        </div>
+        <div class="question">
+          <h2>3. What material is an aluminum foil pan made of?</h2>
+          <label><input type="radio" name="q3" value="plastic" /> Plastic</label><br />
+          <label><input type="radio" name="q3" value="metal" /> Metal</label><br />
+        </div>
+        <button type="submit">Submit</button>
+        <p id="result"></p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 RBRVM Awareness. All rights reserved.</p>
+    <ul class="nav-links">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact Us</a></li>
+    </ul>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav-links');
+      nav.classList.toggle('active');
+    }
+    document.getElementById('quiz-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let score = 0;
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      if(q1 && q1.value === 'metal') score++;
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      if(q2 && q2.value === 'plastic') score++;
+      const q3 = document.querySelector('input[name="q3"]:checked');
+      if(q3 && q3.value === 'metal') score++;
+      document.getElementById('result').textContent = `You scored ${score}/3.`;
+    });
+  </script>
+</body>
+</html>
