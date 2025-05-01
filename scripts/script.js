@@ -21,13 +21,13 @@ if (signupForm) {
             return;
         }
 
-        // Save user details to localStorage
-        const userData = {
-            username: username,
-            email: email,
-            password: password
-        };
-        localStorage.setItem("rbrvmUser", JSON.stringify(userData));
+        // Save user details to localStorage (commented out)
+        // const userData = {
+        //     username: username,
+        //     email: email,
+        //     password: password
+        // };
+        // localStorage.setItem("rbrvmUser", JSON.stringify(userData));
 
         alert("Sign-up successful! You can now login.");
         // Redirect to login page
@@ -44,14 +44,17 @@ if (loginForm) {
         const username = document.getElementById("username").value.trim();
         const password = document.getElementById("password").value;
 
-        // Retrieve stored user from localStorage
-        let storedUser = localStorage.getItem("rbrvmUser");
-        if (storedUser) {
-            storedUser = JSON.parse(storedUser);
-        } else {
-            // If no user stored, use dummy credentials for test
-            storedUser = dummyUser;
-        }
+        // Retrieve stored user from localStorage (commented out)
+        // let storedUser = localStorage.getItem("rbrvmUser");
+        // if (storedUser) {
+        //     storedUser = JSON.parse(storedUser);
+        // } else {
+        //     // If no user stored, use dummy credentials for test
+        //     storedUser = dummyUser;
+        // }
+
+        // Using dummyUser directly since localStorage is disabled
+        const storedUser = dummyUser;
 
         if (username === storedUser.username && password === storedUser.password) {
             alert("Login successful! Welcome, " + username + ".");
